@@ -1,0 +1,194 @@
+/////////////////
+// INTERACTION //
+/////////////////
+
+== Logs ==
+  Funding subscription: 2869
+  using vrfCoordinator: 0x8103B0A8A00be2DDC778e6e7eaa21791Cd364625
+  On Chainid: 11155111
+
+## Setting up (1) EVMs.
+
+==========================
+
+Chain 11155111
+
+Estimated gas price: 3.000000026 gwei
+
+Estimated total gas used for script: 81854
+
+Estimated amount required: 0.000245562002128204 ETH
+
+==========================
+
+###
+Finding wallets for all the necessary addresses...
+##
+Sending transactions [0 - 0].
+⠁ [00:00:00] [################################################################################] 1/1 txes (0.0s)
+Transactions saved to: /home/amaterasu/foundry-23/Lottery_Smart_Contract_Foundry/broadcast/Interaction.s.sol/11155111/run-latest.json
+
+Sensitive values saved to: /home/amaterasu/foundry-23/Lottery_Smart_Contract_Foundry/cache/Interaction.s.sol/11155111/run-latest.json
+
+##
+Waiting for receipts.
+⠉ [00:00:14] [############################################################################] 1/1 receipts (0.0s)
+##### sepolia
+✅ Hash: 0xff15178dd330240d45cf39075ecfd0a67302dd736b4e3b7285ed45d3d984bbe2
+Block: 3703752
+Paid: 0.000177786000711144 ETH (59262 gas * 3.000000012 gwei)
+
+
+Transactions saved to: /home/amaterasu/foundry-23/Lottery_Smart_Contract_Foundry/broadcast/Interaction.s.sol/11155111/run-latest.json
+
+Sensitive values saved to: /home/amaterasu/foundry-23/Lottery_Smart_Contract_Foundry/cache/Interaction.s.sol/11155111/run-latest.json
+
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+Total Paid: 0.000177786000711144 ETH (59262 gas * avg 3.000000012 gwei)
+
+Transactions saved to: /home/amaterasu/foundry-23/Lottery_Smart_Contract_Foundry/broadcast/Interaction.s.sol/11155111/run-latest.json
+
+Sensitive values saved to: /home/amaterasu/foundry-23/Lottery_Smart_Contract_Foundry/cache/Interaction.s.sol/11155111/run-latest.json
+
+
+
+
+////////////////////
+// RAFFLE_SEPOLIA //
+////////////////////
+Traces:
+  [7965875] DeployRaffle::run() 
+    ├─ [2410076] → new HelperConfig@0xC7f2Cf4845C6db0e1a1e91ED41Bcd0FcC1b0E141
+    │   ├─ [0] VM::envUint(PRIVATE_KEY) [staticcall]
+    │   │   └─ ← <env var value>
+    │   └─ ← 11136 bytes of code
+    ├─ [1065] HelperConfig::activeNetworkConfig() [staticcall]
+    │   └─ ← 10000000000000000 [1e16], 30, VRFCoordinatorV2: [0x8103B0A8A00be2DDC778e6e7eaa21791Cd364625], 0x474e34a077df58807dbe9c96d3c009b23b3c6d0cce433e59bbf5b34f823bc56c, 2869, 500000 [5e5], 0x779877A7B0D9E8603169DdbD7836e478b4624789, 83737809332814515238531309991653813037927222537005945836503548901537053537369 [8.373e76]
+    ├─ [0] VM::startBroadcast() 
+    │   └─ ← ()
+    ├─ [590178] → new Raffle@0xbB668D8EC6d60628761EdD08B7AbC090340D48bE
+    │   └─ ← 2823 bytes of code
+    ├─ [0] VM::stopBroadcast() 
+    │   └─ ← ()
+    ├─ [4754781] → new AddConsumer@0xdaE97900D4B184c5D2012dcdB658c008966466DD
+    │   └─ ← 23525 bytes of code
+    ├─ [82112] AddConsumer::addConsumer(Raffle: [0xbB668D8EC6d60628761EdD08B7AbC090340D48bE], VRFCoordinatorV2: [0x8103B0A8A00be2DDC778e6e7eaa21791Cd364625], 2869, 83737809332814515238531309991653813037927222537005945836503548901537053537369 [8.373e76]) 
+    │   ├─ [0] console::log(Adding Conumer Contract: , Raffle: [0xbB668D8EC6d60628761EdD08B7AbC090340D48bE]) [staticcall]
+    │   │   └─ ← ()
+    │   ├─ [0] console::log(Using vrfCoordinator: , VRFCoordinatorV2: [0x8103B0A8A00be2DDC778e6e7eaa21791Cd364625]) [staticcall]
+    │   │   └─ ← ()
+    │   ├─ [0] console::9710a9d0(00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000aa36a7000000000000000000000000000000000000000000000000000000000000000c4f6e20436861696e49643a200000000000000000000000000000000000000000) [staticcall]
+    │   │   └─ ← ()
+    │   ├─ [0] VM::startBroadcast(<pk>) 
+    │   │   └─ ← ()
+    │   ├─ [73410] VRFCoordinatorV2::addConsumer(2869, Raffle: [0xbB668D8EC6d60628761EdD08B7AbC090340D48bE]) 
+    │   │   ├─ emit SubscriptionConsumerAdded(subId: 2869, consumer: Raffle: [0xbB668D8EC6d60628761EdD08B7AbC090340D48bE])
+    │   │   └─ ← ()
+    │   ├─ [0] VM::stopBroadcast() 
+    │   │   └─ ← ()
+    │   └─ ← ()
+    └─ ← Raffle: [0xbB668D8EC6d60628761EdD08B7AbC090340D48bE], HelperConfig: [0xC7f2Cf4845C6db0e1a1e91ED41Bcd0FcC1b0E141]
+
+
+Script ran successfully.
+
+== Return ==
+0: contract Raffle 0xbB668D8EC6d60628761EdD08B7AbC090340D48bE
+1: contract HelperConfig 0xC7f2Cf4845C6db0e1a1e91ED41Bcd0FcC1b0E141
+
+== Logs ==
+  Adding Conumer Contract:  0xbB668D8EC6d60628761EdD08B7AbC090340D48bE
+  Using vrfCoordinator:  0x8103B0A8A00be2DDC778e6e7eaa21791Cd364625
+  On ChainId:  11155111
+
+## Setting up (1) EVMs.
+==========================
+Simulated On-chain Traces:
+
+  [668001] → new DevOpsTools@0x0c603aAFCeE674D3cA6c9832DB45C42f7B98E721
+    └─ ← 2847 bytes of code
+
+  [689466] → new Raffle@0xbB668D8EC6d60628761EdD08B7AbC090340D48bE
+    └─ ← 2823 bytes of code
+
+  [106868] VRFCoordinatorV2::addConsumer(2869, Raffle: [0xbB668D8EC6d60628761EdD08B7AbC090340D48bE]) 
+    ├─ emit SubscriptionConsumerAdded(subId: 2869, consumer: Raffle: [0xbB668D8EC6d60628761EdD08B7AbC090340D48bE])
+    └─ ← ()
+
+
+==========================
+
+Chain 11155111
+
+Estimated gas price: 3.000000016 gwei
+
+Estimated total gas used for script: 1903634
+
+Estimated amount required: 0.005710902030458144 ETH
+
+==========================
+
+###
+Finding wallets for all the necessary addresses...
+##
+Sending transactions [0 - 2].
+⠙ [00:00:01] [##################################################################################################################] 3/3 txes (0.0s)
+Transactions saved to: /home/amaterasu/foundry-23/Lottery_Smart_Contract_Foundry/broadcast/DeployRaffle.s.sol/11155111/run-latest.json
+
+Sensitive values saved to: /home/amaterasu/foundry-23/Lottery_Smart_Contract_Foundry/cache/DeployRaffle.s.sol/11155111/run-latest.json
+
+##
+Waiting for receipts.
+⠚ [00:00:13] [##############################################################################################################] 3/3 receipts (0.0s)
+##### sepolia
+✅ Hash: 0x7a7486d5397602642cacec63c0133e6847482dd5345ba9b638456604a41844e5
+Contract Address: 0x0c603aafcee674d3ca6c9832db45c42f7b98e721
+Block: 3709157
+Paid: 0.002004549006013647 ETH (668183 gas * 3.000000009 gwei)
+
+
+##### sepolia
+✅ Hash: 0x48cdefabb5be0495f5327998daa994f862e76c14948affa6cfbae4fbdcbe9e55
+Contract Address: 0xbb668d8ec6d60628761edd08b7abc090340d48be
+Block: 3709157
+Paid: 0.002069028006207084 ETH (689676 gas * 3.000000009 gwei)
+
+
+##### sepolia
+✅ Hash: 0x9da1bd7ba32d928902cfdbb9736b549d036ebbe1d751420bf9043eaf6c1b6d90
+Block: 3709157
+Paid: 0.000284982000854946 ETH (94994 gas * 3.000000009 gwei)
+
+
+Transactions saved to: /home/amaterasu/foundry-23/Lottery_Smart_Contract_Foundry/broadcast/DeployRaffle.s.sol/11155111/run-latest.json
+
+Sensitive values saved to: /home/amaterasu/foundry-23/Lottery_Smart_Contract_Foundry/cache/DeployRaffle.s.sol/11155111/run-latest.json
+
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+Total Paid: 0.004358559013075677 ETH (1452853 gas * avg 3.000000009 gwei)
+##
+Start verification for (2) contracts
+Start verifying contract `0x0c603aafcee674d3ca6c9832db45c42f7b98e721` deployed on sepolia
+
+Submitting verification for [lib/foundry-devops/src/DevOpsTools.sol:DevOpsTools] "0x0c603aAFCeE674D3cA6c9832DB45C42f7B98E721".
+Submitted contract for verification:
+        Response: `OK`
+        GUID: `itlrcxndeds9guufrmdpnrhfvqgpmge1qba95svav5gcfyvx3x`
+        URL:
+        https://sepolia.etherscan.io/address/0x0c603aafcee674d3ca6c9832db45c42f7b98e721
+Contract verification status:
+Response: `NOTOK`
+Details: `Pending in queue`
+Contract verification status:
+Response: `NOTOK`
+Details: `Fail - Unable to verify. Compiled contract runtime bytecode does NOT match the on-chain runtime bytecode.`
+Contract failed to verify.
+make: *** [Makefile:43: deploy] Error 1
